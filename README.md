@@ -410,3 +410,148 @@ function getBotResponse(input) {
 
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot UI - Modern Design</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat-wrapper {
+      width: 100%;
+      max-width: 450px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .chat-header {
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .chat-box {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .msg {
+      padding: 12px 16px;
+      border-radius: 20px;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+
+    .bot {
+      background: rgba(255,255,255,0.1);
+      align-self: flex-start;
+    }
+
+    .user {
+      background: #00d4ff;
+      color: #000;
+      align-self: flex-end;
+    }
+
+    .input-box {
+      margin-top: 20px;
+      display: flex;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .input-box input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      background: transparent;
+      color: white;
+      font-size: 1em;
+      outline: none;
+    }
+
+    .input-box button {
+      padding: 0 20px;
+      border: none;
+      background: #00d4ff;
+      color: #000;
+      font-weight: bold;
+      cursor: not-allowed;
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 0.85em;
+      text-align: center;
+      color: #ccc;
+    }
+
+    /* Scrollbar for chat */
+    .chat-box::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .chat-box::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+
+    .chat-box::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-wrapper">
+    <div class="chat-header">🤖 AI Assistant</div>
+
+    <div class="chat-box">
+      <div class="msg bot">Hello! I am your AI assistant.</div>
+      <div class="msg user">Hi there! What can you do?</div>
+      <div class="msg bot">I can help answer questions and assist with tasks. (When connected)</div>
+    </div>
+
+    <div class="input-box">
+      <input type="text" placeholder="Type your message..." disabled>
+      <button disabled>Send</button>
+    </div>
+
+    <div class="note">* This is just a visual UI design. No real AI functionality yet.</div>
+  </div>
+
+</body>
+</html>
