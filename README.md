@@ -243,3 +243,112 @@ function getBotResponse(input) {
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div id="chat-log"></div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Ask me anything...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+body {
+  background: #1e1e2f;
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  background: #2b2b3c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+}
+
+#chat-log {
+  height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background: #00b894;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+const chatLog = document.getElementById("chat-log");
+const userInput = document.getElementById("user-input");
+
+// Your OpenAI API key here 👇
+const API_KEY = "YOUR_OPENAI_API_KEY";
+
+async function sendMessage() {
+  const message = userInput.value;
+  if (!message) return;
+
+  // Show user message
+  chatLog.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+  userInput.value = "";
+
+  // Show typing
+  chatLog.innerHTML += `<p><em>AI is thinking...</em></p>`;
+  chatLog.scrollTop = chatLog.scrollHeight;
+
+  // Call OpenAI API
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${API_KEY}`
+    },
+    body: JSON.stringify({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }]
+    })
+  });
+
+  const data = await response.json();
+  const reply = data.choices[0].message.content;
+
+  // Show AI message
+  chatLog.innerHTML = chatLog.innerHTML.replace(`<p><em>AI is thinking...</em></p>`, '');
+  chatLog.innerHTML += `<p><strong>AI:</strong> ${reply}</p>`;
+  chatLog.scrollTop = chatLog.scrollHeight;
+}
+  
+</body>
+</html>
