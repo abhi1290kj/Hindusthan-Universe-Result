@@ -289,3 +289,124 @@ function getBotResponse(input) {
   <p><i>Note: This chatbot doesn't really talk — it's just HTML design.</i></p>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern AI Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: #fff;
+    }
+
+    .chat-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #1f2937;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      padding: 20px;
+      background-color: #111827;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #374151;
+    }
+
+    .chat-box {
+      padding: 20px;
+      height: 300px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 15px;
+    }
+
+    .user {
+      text-align: right;
+    }
+
+    .user .bubble {
+      background-color: #2563eb;
+      color: white;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 20px 20px 0 20px;
+    }
+
+    .bot .bubble {
+      background-color: #4b5563;
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 20px 20px 20px 0;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #374151;
+      background-color: #111827;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 1em;
+    }
+
+    .chat-input button {
+      padding: 15px 25px;
+      background-color: #10b981;
+      color: white;
+      border: none;
+      cursor: not-allowed;
+    }
+
+    .note {
+      text-align: center;
+      padding: 10px;
+      font-size: 0.9em;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">🤖 AI Chatbot (Design Only)</div>
+    <div class="chat-box">
+      <div class="message bot">
+        <div class="bubble">Hello! I'm your AI assistant.</div>
+      </div>
+      <div class="message user">
+        <div class="bubble">Hi! What can you do?</div>
+      </div>
+      <div class="message bot">
+        <div class="bubble">I can chat, answer questions, and help with tasks (if JS/API is added).</div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type your message..." disabled>
+      <button disabled>Send</button>
+    </div>
+  </div>
+
+  <div class="note">* This is just an HTML/CSS design. Real AI needs JavaScript + API.</div>
+
+</body>
+</html>
