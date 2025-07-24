@@ -1,139 +1,101 @@
-
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sarkari Alert - सरकारी रिजल्ट</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hindusthan Universe Result</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #111;
+      background-color: #f7f7f7;
     }
     header {
-      background: #800000;
+      background-color: #800000;
       color: white;
+      padding: 10px 20px;
       text-align: center;
-      padding: 20px 10px;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin-top: 5px;
-      font-size: 0.95em;
+      font-size: 28px;
     }
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background: #990000;
+      background-color: #333;
+      overflow: auto;
     }
     nav a {
-      padding: 12px 16px;
+      float: left;
+      display: block;
       color: white;
+      text-align: center;
+      padding: 12px 20px;
       text-decoration: none;
-      font-weight: bold;
     }
     nav a:hover {
-      background: #b30000;
+      background-color: #575757;
     }
-    .ticker {
-      background: #111;
-      color: #ffcc00;
+    .marquee {
+      background: #ffffcc;
+      color: #cc0000;
       padding: 10px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    .ticker span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: marquee 15s linear infinite;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
+      font-weight: bold;
     }
     .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    .search-box {
       display: flex;
-      margin-bottom: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
     }
-    .search-box input {
+    .main {
+      flex: 3;
+      padding: 10px;
+    }
+    .sidebar {
       flex: 1;
       padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px 0 0 4px;
+      background-color: #fff;
+      margin-top: 20px;
     }
-    .search-box button {
-      padding: 10px 20px;
-      border: none;
-      background: #800000;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 0 4px 4px 0;
+    .section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-    h2 {
-      border-left: 5px solid #800000;
-      padding-left: 10px;
-      margin-top: 30px;
+    .section h2 {
+      margin-top: 0;
       color: #800000;
     }
     ul {
-      list-style: none;
-      padding: 0;
+      list-style-type: none;
+      padding-left: 10px;
     }
     ul li {
-      margin: 10px 0;
-      padding: 10px;
-      background: #f9f9f9;
-      border-left: 4px solid #800000;
-      transition: 0.3s;
-    }
-    ul li:hover {
-      background: #fff2f2;
+      margin-bottom: 10px;
     }
     ul li a {
+      color: #0077cc;
       text-decoration: none;
-      color: #111;
-      font-weight: bold;
     }
-    .ads {
-      text-align: center;
-      margin: 20px 0;
-      padding: 10px;
-      background: #fafafa;
-      border: 1px dashed #ccc;
+    ul li a:hover {
+      text-decoration: underline;
     }
     footer {
-      background: #800000;
+      background-color: #333;
       color: white;
       text-align: center;
       padding: 15px;
-      margin-top: 40px;
+      margin-top: 20px;
     }
-    @media(max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      .search-box {
+    @media (max-width: 768px) {
+      .container {
         flex-direction: column;
       }
-      .search-box input, .search-box button {
+      nav a {
+        float: none;
         width: 100%;
-        border-radius: 4px;
-        margin-bottom: 10px;
+        text-align: left;
+        border-top: 1px solid #444;
       }
     }
   </style>
@@ -141,30 +103,78 @@
 <body>
 
   <header>
-    <h1>Sarkari Alert</h1>
-    <p>भारत की सभी सरकारी नौकरियों की जानकारी एक जगह</p>
+    <h1>Hindusthan Universe Result</h1>
+    <p>भारत की सबसे भरोसेमंद सरकारी नौकरी वेबसाइट</p>
   </header>
 
   <nav>
-    <a href="#">🏠 होम</a>
-    <a href="#">📝 जॉब्स</a>
-    <a href="#">📥 एडमिट कार्ड</a>
-    <a href="#">📊 रिजल्ट</a>
-    <a href="#">📚 सिलेबस</a>
-    <a href="#">📢 Answer Key</a>
+    <a href="#">Home</a>
+    <a href="#">Latest Jobs</a>
+    <a href="#">Admit Card</a>
+    <a href="#">Results</a>
+    <a href="#">Answer Key</a>
+    <a href="#">Syllabus</a>
+    <a href="#">Contact</a>
   </nav>
 
-  <div class="ticker">
-    <span>SSC CGL 2025 फॉर्म शुरू | UP Police भर्ती 2025 | CTET एडमिट कार्ड जारी | SSC GD रिजल्ट घोषित | RRB NTPC सिलेबस अपडेट | ...</span>
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left">🔥 SSC GD 2025 Notification जारी हो गया है | UP Police SI भर्ती जल्द | Railway ALP Form Correction चालू 🔥</marquee>
   </div>
 
   <div class="container">
-      <!-- Search -->
-  <div class="search-container">
-    <input type="text" placeholder="सरकारी नौकरी खोजें...">
-    <button type="submit">🔍 खोजें</button>
+    <div class="main">
+      
+      <div class="section">
+        <h2>🔴 Latest Jobs</h2>
+        <ul>
+          <li><a href="#">UP Police Constable Recruitment 2025 – Apply Online</a></li>
+          <li><a href="#">SSC GD Constable Notification 2025 – Download PDF</a></li>
+          <li><a href="#">Railway ALP Recruitment 2025 – 5696 Posts</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🟢 Admit Cards</h2>
+        <ul>
+          <li><a href="#">UPSSSC PET Admit Card 2025</a></li>
+          <li><a href="#">SSC CGL Tier I Admit Card</a></li>
+          <li><a href="#">Railway Group D Phase 2 Admit Card</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🔵 Results</h2>
+        <ul>
+          <li><a href="#">UP Board 10th Result 2025</a></li>
+          <li><a href="#">SSC CGL Tier II Result 2025</a></li>
+          <li><a href="#">Bihar Police SI Final Result 2025</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sidebar">
+      <div class="section">
+        <h2>📌 Quick Links</h2>
+        <ul>
+          <li><a href="#">Sarkari Yojana</a></li>
+          <li><a href="#">Exam Calendar</a></li>
+          <li><a href="#">Online Form</a></li>
+          <li><a href="#">Scholarship</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>📧 Contact Us</h2>
+        <p>Email: support@hindusthanresult.in</p>
+        <p>Phone: +91-9876543210</p>
+      </div>
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 Hindusthan Universe Result | All Rights Reserved
+  </footer>
 
 </body>
 </html>
-
