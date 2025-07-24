@@ -175,6 +175,31 @@
   <footer>
     &copy; 2025 Hindusthan Universe Result | All Rights Reserved
   </footer>
+<div class="section">
+        <h2>🟠 Answer Keys</h2>
+        <ul>
+          <li><a href="#">SSC CGL Tier I Answer Key 2025</a></li>
+          <li><a href="#">UP Police Constable Answer Key</a></li>
+          <li><a href="#">Bihar Board Inter Answer Key</a></li>
+        </ul>
+      </div>
 
+      <div class="section">
+        <h2>📘 Syllabus</h2>
+        <ul>
+          <li><a href="#">SSC CGL 2025 Syllabus PDF</a></li>
+          <li><a href="#">UPSSSC PET 2025 Syllabus</a></li>
+          <li><a href="#">Railway ALP Exam Syllabus</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>📅 Exam Calendar</h2>
+        <ul>
+          <li><a href="#">UPSC Exam Calendar 2025</a></li>
+          <li><a href="#">SSC Annual Calendar 2025</a></li>
+          <li><a href="#">UPSSSC Upcoming Exams</a></li>
+        </ul>
+      </div>
 </body>
 </html>
