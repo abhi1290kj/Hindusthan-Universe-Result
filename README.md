@@ -203,3 +203,43 @@
       </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple AI Chatbot</title>
+  <style>
+    body { font-family: Arial; background: #f2f2f2; padding: 20px; }
+    #chatbox { width: 100%; height: 300px; border: 1px solid #ccc; overflow-y: scroll; background: #fff; padding: 10px; }
+    input[type="text"] { width: 80%; padding: 10px; }
+    button { padding: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Simple AI Chatbot</h2>
+
+<div id="chatbox"></div><br>
+<input type="text" id="userInput" placeholder="Type something..." />
+<button onclick="talk()">Send</button>
+
+<script>
+function talk() {
+  var user = document.getElementById("userInput").value;
+  var bot = getBotResponse(user);
+  document.getElementById("chatbox").innerHTML += "<b>You:</b> " + user + "<br>";
+  document.getElementById("chatbox").innerHTML += "<b>Bot:</b> " + bot + "<br>";
+  document.getElementById("userInput").value = "";
+}
+
+function getBotResponse(input) {
+  input = input.toLowerCase();
+  if (input.includes("hello")) return "Hi there!";
+  else if (input.includes("how are you")) return "I'm just a bot, but I'm doing well!";
+  else if (input.includes("name")) return "I'm a simple AI chatbot.";
+  else return "Sorry, I don't understand that.";
+}
+</script>
+
+</body>
+</html>
