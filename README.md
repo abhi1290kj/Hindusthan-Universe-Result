@@ -1,5 +1,3 @@
-# Hindusthan-Universe-Result
-Hindusthan Universe Result
 
 <!DOCTYPE html>
 <html lang="hi">
